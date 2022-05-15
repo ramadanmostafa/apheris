@@ -54,3 +54,13 @@ send events to it.
 to career@apheris.com
 • Please share with us the time it took you to complete the assignment
 Thank you for taking the time and happy coding! :)
+## How to run it
+```
+cd apheris
+cp .env.dist .env
+cd ..
+docker-compose build
+docker-compose up
+docker-compose run web python manage.py test --keepdb
+```
+you can use http://127.0.0.1:8000/api/v1/pay to test the API
